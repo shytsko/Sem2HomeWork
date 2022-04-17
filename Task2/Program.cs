@@ -18,35 +18,13 @@ while (index < inputNumbers.Length)
 }
 
 
-int GetLenIntegerNumber(int number)
-{
-    if (number == 0)
-        return 1;
-
-    int countDigits = 0;
-    while (number > 0)
-    {
-        number /= 10;
-        countDigits++;
-    }
-
-    return countDigits;
-}
-
-
 int GetThirdDigit(int number)
 {
-    int inputNumberLen = GetLenIntegerNumber(number);
-
-    if (inputNumberLen < 3)
+    if (number < 100)
         return -1;
 
-    int countDiv = inputNumberLen - 3;
-    while (countDiv > 0)
-    {
+    while (number > 999)
         number /= 10;
-        countDiv--;
-    }
 
     return number % 10;
 }
