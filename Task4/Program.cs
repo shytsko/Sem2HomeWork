@@ -4,7 +4,7 @@
 
 int inputMysteryNumber = new Random().Next(100);
 
-Console.WriteLine($"Загадоное число: {inputMysteryNumber}");
+// Console.WriteLine($"Загадоное число: {inputMysteryNumber}");
 
 Console.WriteLine("Отгадайте загадонное число от 0 до 99");
 
