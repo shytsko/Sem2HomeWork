@@ -18,14 +18,9 @@ while (countTries > 0)
     if (inputUsersNumber == inputMysteryNumber)
         break;
     else
-    {
-        Console.Write("Не угадали. Ваше число ");
-        if (inputUsersNumber > inputMysteryNumber)
-            Console.Write("больше ");
-        else
-            Console.Write("меньше ");
-        Console.WriteLine("загадонного");
-    }
+        Console.WriteLine(
+            $"Не угадали. Ваше число {ComparingToString(inputUsersNumber, inputMysteryNumber)} загадонного"
+        );
     countTries--;
 }
 
@@ -34,3 +29,10 @@ if (countTries > 0)
 else
     Console.WriteLine("Увы. Больше попыток нет");
 
+string ComparingToString(int number1, int number2)
+{
+    if (number1 > number2)
+        return "больше";
+    else
+        return "меньше";
+}
